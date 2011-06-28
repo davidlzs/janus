@@ -34,6 +34,27 @@ On a fresh Ubuntu install you also have to install the packages `rake` and `ruby
 before running the install script and `exuberant-ctags` for ctags
 support.
 
+### Windows
+
+Windows currently is in experimental support, proceed on your own risk,
+or even better - fix and contribute!
+
+Requirements:
+
+RubyInstaller and DevKit from [rubyinstaller.org](http://rubyinstaller.org/downloads/).
+Read and follow DevKit installation instructions.
+
+[MsisGit](http://code.google.com/p/msysgit/)
+
+Besides, building CommandT plugin requires Devkit shell with git executable in %PATH%,
+and running it requires [Wu Yongwei's gvim build](http://wyw.dcweb.cn/#download). The latter
+is required because www.vim.org's
+version is rather old, and it still doesn't contain patch 88, which
+[solves the problem](https://wincent.com/issues/1647#comment_6543).
+It is best to download and install official gVim 7.3 from www.vim.org,
+and then replace executables with Wu Yongwei's build.
+
+
 ## Installation
 
 0. `for i in ~/.vim ~/.vimrc ~/.gvimrc; do [ -e $i ] && mv $i $i.old;
