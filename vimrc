@@ -147,3 +147,7 @@ set showcmd
 if filereadable(expand("$HOME/.vimrc.local"))
   source $HOME/.vimrc.local
 endif
+
+" Windows compatibility
+source $VIMRUNTIME/mswin.vim
+behave mswin
