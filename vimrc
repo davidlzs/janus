@@ -128,8 +128,8 @@ set modelines=10
 color desert
 
 " Directories for swp files
-set backupdir=~/.vim/backup
-set directory=~/.vim/backup
+set backupdir=$HOME/vimfiles/backup
+set directory=$HOME/vimfiles/backup
 
 " Turn off jslint errors by default
 let g:JSLintHighlightErrorLine = 0
@@ -144,6 +144,6 @@ runtime! macros/matchit.vim
 set showcmd
 
 " Include user's local vim config
-if filereadable(expand("~/.vimrc.local"))
-  source ~/.vimrc.local
+if filereadable(expand("$HOME/.vimrc.local"))
+  source $HOME/.vimrc.local
 endif
