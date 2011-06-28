@@ -136,7 +136,7 @@ vim_plugin_task "jslint",           "git://github.com/hallettj/jslint.vim.git"
 vim_plugin_task "nerdtree",         "git://github.com/wycats/nerdtree.git"
 vim_plugin_task "nerdcommenter",    "git://github.com/ddollar/nerdcommenter.git"
 vim_plugin_task "surround",         "git://github.com/tpope/vim-surround.git"
-vim_plugin_task "taglist",          "git://github.com/vim-scripts/taglist.vim.git"
+#vim_plugin_task "taglist",          "git://github.com/vim-scripts/taglist.vim.git"
 vim_plugin_task "vividchalk",       "git://github.com/tpope/vim-vividchalk.git"
 vim_plugin_task "solarized",        "git://github.com/altercation/vim-colors-solarized.git"
 vim_plugin_task "supertab",         "git://github.com/ervandew/supertab.git"
@@ -156,24 +156,24 @@ vim_plugin_task "vim-coffee-script","git://github.com/kchmck/vim-coffee-script.g
 vim_plugin_task "syntastic",        "git://github.com/scrooloose/syntastic.git"
 vim_plugin_task "puppet",           "git://github.com/ajf/puppet-vim.git"
 vim_plugin_task "scala",            "git://github.com/bdd/vim-scala.git"
-vim_plugin_task "gist-vim",         "git://github.com/mattn/gist-vim.git"
+#vim_plugin_task "gist-vim",         "git://github.com/mattn/gist-vim.git"
 
 #vim_plugin_task "hammer",           "git://github.com/robgleeson/hammer.vim.git" do
 #  sh "gem install github-markup redcarpet"
 #end
 
-vim_plugin_task "command_t",        "http://s3.wincent.com/command-t/releases/command-t-1.2.1.vba" do
-  Dir.chdir "ruby/command-t" do
-    if File.exists?("/usr/bin/ruby1.8") # prefer 1.8 on *.deb systems
-      sh "/usr/bin/ruby1.8 extconf.rb"
-    elsif File.exists?("/usr/bin/ruby") # prefer system rubies
-      sh "/usr/bin/ruby extconf.rb"
-    elsif `rvm > /dev/null 2>&1` && $?.exitstatus == 0
-      sh "rvm system ruby extconf.rb"
-    end
-    sh "make clean && make"
-  end
-end
+#vim_plugin_task "command_t",        "http://s3.wincent.com/command-t/releases/command-t-1.2.1.vba" do
+#  Dir.chdir "ruby/command-t" do
+#    if File.exists?("/usr/bin/ruby1.8") # prefer 1.8 on *.deb systems
+#      sh "/usr/bin/ruby1.8 extconf.rb"
+#    elsif File.exists?("/usr/bin/ruby") # prefer system rubies
+#      sh "/usr/bin/ruby extconf.rb"
+#    elsif `rvm > /dev/null 2>&1` && $?.exitstatus == 0
+#      sh "rvm system ruby extconf.rb"
+#    end
+#    sh "make clean && make"
+#  end
+#end
 
 vim_plugin_task "janus_themes" do
   # custom version of railscasts theme
