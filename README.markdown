@@ -54,6 +54,17 @@ version is rather old, and it still doesn't contain patch 88, which
 It is best to download and install official gVim 7.3 from www.vim.org,
 and then replace executables with Wu Yongwei's build.
 
+Once pre-reqs are installed, start MsysGit console, set the following
+environment vars:
+    export RI_DEVKIT=/c/DevKit/
+    PATH=/c/DevKit/bin/:/c/DevKit/mingw/bin/:$PATH
+and then install Janus
+    cd $HOME
+    git clone git://github.com/carlhuda/janus.git vimfiles
+    cd vimfiles
+    rake
+and in the end
+    cp vimrc ../_vimrc # Win gVim uses _vimrc settings file
 
 ## Installation
 
