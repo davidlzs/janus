@@ -66,6 +66,19 @@ and then install Janus
 and in the end
     cp vimrc ../_vimrc # Win gVim uses _vimrc settings file
 
+Another caution: if you are using MsysGit as the console, it comes with
+its own distribution of vim73, and the PATHs are setup in a way that
+MsysGit's vim always appears first in the paths. I ended up adding
+aliases in my $HOME/.bashrc file:
+    alias gvim="/c/Program\ Files\ \(x86\)/Vim/vim73/gvim.exe"
+    alias vim="/c/Program\ Files\ \(x86\)/Vim/vim73/vim.exe"
+
+You can check for the version of vim by doing :ve, it should be 
+  ...
+  Included patches: 1-237
+  Compiled by Yongwei@Shanghai
+  ...
+
 ## Installation
 
 0. `for i in ~/.vim ~/.vimrc ~/.gvimrc; do [ -e $i ] && mv $i $i.old;
