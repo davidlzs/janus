@@ -149,5 +149,5 @@ if filereadable(expand("$HOME/.vimrc.local"))
 endif
 
 " Windows compatibility
-source $VIMRUNTIME/mswin.vim
-behave mswin
+" source $VIMRUNTIME/mswin.vim
+" behave mswin
