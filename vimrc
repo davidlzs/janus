@@ -3,6 +3,8 @@ if has("mac")
   set macmeta
 endif
 
+" let mapleader = "\<SPACE>"
+let mapleader = ","
 
 set nocompatible
 
