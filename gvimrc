@@ -123,9 +123,11 @@ function StartTerm()
 endfunction
 
 " Project Tree
-autocmd VimEnter * keepjumps call s:CdIfDirectory(expand("<amatch>"))
-autocmd FocusGained * keepjumps call s:UpdateNERDTree()
-autocmd WinEnter * keepjumps call s:CloseIfOnlyNerdTreeLeft()
+if exists("loaded_nerd_tree")
+  autocmd VimEnter * call s:CdIfDirectory(expand("<amatch>"))
+  autocmd FocusGained * call s:UpdateNERDTree()
+  autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
+endif
 
 " Close all open buffers on entering a window if the only
 " buffer that's left is the NERDTree buffer
@@ -263,11 +265,13 @@ RUBY
 endfunction
 
 " Define the NERDTree-aware aliases
-call s:DefineCommand("cd", "ChangeDirectory")
-call s:DefineCommand("touch", "Touch")
-call s:DefineCommand("rm", "Remove")
-call s:DefineCommand("e", "Edit")
-call s:DefineCommand("mkdir", "Mkdir")
+if exists("loaded_nerd_tree")
+  call s:DefineCommand("cd", "ChangeDirectory")
+  call s:DefineCommand("touch", "Touch")
+  call s:DefineCommand("rm", "Remove")
+  call s:DefineCommand("e", "Edit")
+  call s:DefineCommand("mkdir", "Mkdir")
+endif
 
 source ~/.vim/snippets/support_functions.vim
 
